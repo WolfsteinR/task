@@ -19,6 +19,7 @@ class BookController extends Controller
         $this->validate($request, [
             'name' => 'required|max:255',
             'author' => 'required',
+			'cover' => 'mimes:jpeg,jpg,bmp,png'
         ]);
         $file = $request->file;
         if(!empty($file)) {
@@ -30,9 +31,7 @@ class BookController extends Controller
         $book->fill($request->all());
         $book->cover = $filename;
         $book->save();
-        foreach ($author_id as $id) {
-            $book->authors()->attach(1, ['author_id'=>$id,'book_id'=>$book->id]);
-        }
+		$book->authors()->sync($author_id);
 
         return redirect('/');
     }

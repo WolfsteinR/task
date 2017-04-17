@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class book extends Model
+class Book extends Model
 {
     protected $fillable = ['name', 'publishing_office', 'year', 'edition', 'language', 'cover'];
     //
