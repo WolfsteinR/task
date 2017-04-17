@@ -7,6 +7,7 @@
                 <th>Название</th>
                 <th>Автор</th>
                 <th>Обложка</th>
+                <th>Издательство</th>
                 <th>Год издания</th>
             </thead>
             <tbody>
@@ -21,6 +22,7 @@
                             @endif
                         </td>
                         <td><img src="/uploads/{{$book->cover}}" style="max-height:80px" class="img-responsive"></td>
+                        <td>{{$book->publishing_office}}</td>
                         <td>{{$book->year}}</td>
                     </tr>
                 @endforeach

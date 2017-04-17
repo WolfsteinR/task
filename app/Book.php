@@ -10,6 +10,6 @@ class Book extends Model
     //
     public function authors()
     {
-        return $this->belongsToMany('App\Author', 'author_book', 'book_id', 'author_id'); //->withPivot('column1', 'column2'); //, 'book_id', 'author_id'
+        return $this->belongsToMany('App\Author', 'author_book', 'book_id', 'author_id');
     }
 }
