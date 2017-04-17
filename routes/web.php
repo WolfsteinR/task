@@ -14,8 +14,8 @@
 Route::get('/', 'BookController@index');
 Route::get('/create-author', function () {
     return view('form.create_author');
-});
-Route::get('/create-book', 'BookController@create_form');
+})->name('create_author');
+Route::get('/create-book', 'BookController@create_form')->name('create_book');
 
 Route::post('/create_author', 'AuthorController@create');
 Route::post('/create_book', 'BookController@create');

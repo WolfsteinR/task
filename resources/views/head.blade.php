@@ -20,8 +20,8 @@
                 <div class="col-md-12">
                     <ul class="nav navbar-nav">
                         <li><a href="/">Главная</a></li>
-                        <li><a href="/create-author">Добавить автора</a></li>
-                        <li><a href="/create-book">Добавить книгу</a></li>
+                        <li><a href="{{route('create_author')}}">Добавить автора</a></li>
+                        <li><a href="{{route('create_book')}}">Добавить книгу</a></li>
                     </ul>
                 </div>
             </div>
