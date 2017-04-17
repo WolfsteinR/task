@@ -8,12 +8,22 @@ use App\Book;
 
 class BookController extends Controller
 {
+    /**
+     * Вывод списка книг
+     *
+     * @var array
+     */
     public function index() {
         $books = array();
         $books = Book::orderBy('name')->get();
         return view('welcome', ['books' => $books]);
     }
 
+    /**
+     * Создание новой книги
+     *
+     * @var array
+     */
     public function create(Request $request) {
 
         $this->validate($request, [
@@ -36,6 +46,11 @@ class BookController extends Controller
         return redirect('/');
     }
 
+    /**
+     * Вывод формы для создания новой книги
+     *
+     * @var array
+     */
     public function create_form() {
         $authors = array();
         $authors = DB::select('select id, name, surname, patronymic from authors');

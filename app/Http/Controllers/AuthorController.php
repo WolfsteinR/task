@@ -7,7 +7,11 @@ use App\Author;
 
 class AuthorController extends Controller
 {
-    //
+    /**
+     * Создание нового автора
+     *
+     * @var array
+     */
     public function create(Request $request) {
 
         $this->validate($request, [
