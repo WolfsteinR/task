@@ -1,0 +1,1 @@
+[15-Apr-2017 18:49:33 UTC] PHP Fatal error:  Cannot declare class App\Http\Controllers\Author because the name is already in use in /home/richard/public_html/laravel/app/Http/Controllers/Author.php on line 8
