@@ -16,7 +16,7 @@
                         <td>
                             @if(count($book->authors) > 0)
                                 @foreach ($book->authors as $author)
-                                    {{$author->surname}} {{$author->name}}
+                                    {{$author->surname}} {{$author->name}}<br/>
                                 @endforeach
                             @endif
                         </td>
